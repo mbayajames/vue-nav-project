@@ -1,0 +1,230 @@
+<template>
+  <div class="page-wrapper">
+    <div class="content">
+      <!-- Hero Section -->
+      <section
+        class="hero"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200');
+        "
+        data-aos="fade-up"
+      >
+        <div class="hero-overlay">
+          <h1>Welcome to CarZone</h1>
+          <p>Your trusted destination for quality vehicles.</p>
+          <router-link to="/contact" class="cta-button">
+            Get Started
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </router-link>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section
+        class="container features-section"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h2>Why Choose Us</h2>
+        <div class="features-grid">
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fas fa-car feature-icon"></i>
+            <h3>Wide Selection</h3>
+            <p>Choose from a variety of premium vehicles.</p>
+          </div>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fas fa-star feature-icon"></i>
+            <h3>Top Quality</h3>
+            <p>Every car is inspected for excellence.</p>
+          </div>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+            <i class="fas fa-handshake feature-icon"></i>
+            <h3>Trusted Service</h3>
+            <p>Our team ensures a seamless experience.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section
+        class="container testimonials-section"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        <h2>Customer Reviews</h2>
+        <div class="testimonials-grid">
+          <div
+            class="testimonial-card"
+            data-aos="slide-up"
+            data-aos-delay="600"
+          >
+            <i class="fas fa-quote-left testimonial-icon"></i>
+            <p>"Amazing experience at CarZone!"</p>
+            <h3>John Doe</h3>
+          </div>
+          <div
+            class="testimonial-card"
+            data-aos="slide-up"
+            data-aos-delay="700"
+          >
+            <i class="fas fa-quote-left testimonial-icon"></i>
+            <p>"Best car buying process ever."</p>
+            <h3>Jane Smith</h3>
+          </div>
+          <div
+            class="testimonial-card"
+            data-aos="slide-up"
+            data-aos-delay="800"
+          >
+            <i class="fas fa-quote-left testimonial-icon"></i>
+            <p>"Highly recommend their service."</p>
+            <h3>Mike Brown</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>© 2025 CarZone. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
+
+<style scoped>
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.hero-overlay {
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: white;
+  margin-bottom: 1.8rem;
+}
+
+.hero-overlay p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: white;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: #1e3a8a;
+  text-align: center;
+  margin: 3.5rem 0;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;
+  margin: 0.5rem auto;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: #1e3a8a;
+  text-align: center;
+}
+
+p {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: #0a0a0a;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.features-section,
+.testimonials-section {
+  padding: 3rem 0;
+}
+
+.feature-icon,
+.testimonial-icon,
+.cta-icon {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.feature-icon:hover,
+.testimonial-icon:hover,
+.cta-icon:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    justify-content: flex-start;
+    padding: 1rem 0;
+  }
+
+  .hero {
+    min-height: 300px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .feature-icon,
+  .testimonial-icon {
+    font-size: 1.5rem;
+  }
+}
+</style>
