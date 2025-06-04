@@ -169,4 +169,4 @@ Open a pull request.
 License
 This project is licensed under the MIT License. See LICENSE for details.
 
-Built with 🚗 by [Your Name] on June 4, 2025.
+Built with 🚗 by [James Mbaya Muthiora] on June 4, 2025.
